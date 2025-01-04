@@ -10,7 +10,7 @@ async function bootstrap() {
     origin: ['http://localhost:3000']
   })
 
-  const PORT = new ConfigService().get('getawayPort');
+  const PORT = new ConfigService().get('gatewayPort');
   await app.listen(PORT)
   console.log(`API GATEWAY IS RUNNING ON PORT : ${PORT}   STARTED AT ${new Date()}`)
 }

@@ -1,7 +1,7 @@
 import { Transport } from "@nestjs/microservices"
 
 export class ConfigService {
-    private readonly envConfiure: { [key: string]: any } = null
+    private readonly envConfiure: { [key: string]: any } = {}
 
     constructor() {
         this.envConfiure.gatewayPort = 3000
@@ -9,8 +9,8 @@ export class ConfigService {
         // WRITE SERVER
         this.envConfiure.writeService = {
             options : {
-                port: 3001,
-                host: 'localhost'
+                port: 8082,
+                host: '0.0.0.0'
             },
             transport: Transport.TCP
         }
